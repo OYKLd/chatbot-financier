@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Assistance Financière</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #005A8B, #00AEEF);
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-custom">
+    <div class="glassmorphism w-full max-w-md text-white">
+        <h2 class="text-2xl font-semibold text-center mb-6">Connexion</h2>
+        
+        <form action="#" method="POST" class="space-y-4">
+            <!-- Email -->
+            <div>
+                <label class="block">Email</label>
+                <input type="email" class="w-full p-3 border rounded-lg bg-white text-gray-700" placeholder="Ex: awa@email.com">
+            </div>
+
+            <!-- Mot de passe -->
+            <div>
+                <label class="block">Mot de passe</label>
+                <input type="password" class="w-full p-3 border rounded-lg bg-white text-gray-700">
+            </div>
+
+            <!-- Bouton -->
+            <button type="submit" class="bg-yellow-400 text-gray-800 py-3 px-6 rounded-lg font-semibold hover:bg-yellow-500"><a href="chatBot.html">Se connecter</a></button>
+
+        </form>
+
+        <p class="text-center mt-4">
+            Pas encore de compte ? <a href="inscription.html" class="text-yellow-300">S'inscrire</a>
+        </p>
+    </div>
+</body>
+</html>

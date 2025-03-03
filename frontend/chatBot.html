@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - Assistance Financière</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-gradient-custom {
+            background: linear-gradient(135deg, #005A8B, #00AEEF);
+        }
+        .chat-container {
+            max-width: 500px;
+            height: 600px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-custom">
+    <div class="chat-container w-full">
+        <h2 class="text-2xl font-semibold text-white text-center mb-4">Chatbot Financier</h2>
+        
+        <div id="chat-box" class="space-y-2 text-white">
+            <div class="bg-blue-500 p-3 rounded-lg max-w-xs">Bonjour ! Comment puis-je vous aider aujourd’hui ? 😊</div>
+        </div>
+        
+        <div class="mt-4 flex">
+            <input id="user-input" type="text" class="w-full p-3 border rounded-lg text-gray-700" placeholder="Écrivez votre message...">
+            <button onclick="sendMessage()" class="ml-2 bg-yellow-400 text-gray-800 px-4 py-3 rounded-lg">Envoyer</button>
+        </div>
+    </div>
+    
+    <script>
+        function sendMessage() {
+            const input = document.getElementById("user-input");
+            const message = input.value.trim();
+            if (message) {
+                const chatBox = document.getElementById("chat-box");
+                
+                const userMessage = document.createElement("div");
+                userMessage.className = "bg-gray-300 text-black p-3 rounded-lg max-w-xs self-end ml-auto";
+                userMessage.textContent = message;
+                chatBox.appendChild(userMessage);
+                
+                input.value = "";
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
